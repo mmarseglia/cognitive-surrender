@@ -18,7 +18,7 @@ Shaw and Nave also measured confidence. Across both conditions — correct AI an
 
 ## 3. Why willpower is the wrong tool
 
-David McRaney, host of the *You Are Not So Smart* podcast, reframes the Shaw and Nave result as something older than AI. Confident, fluent, agreeable AI prose does not land on a rational evaluator who weighs it and decides. It lands on evolved machinery that reads signals for agency and trust, and fires a response before deliberation starts. McRaney calls the pattern *agentic pareidolia* — the perception of a mind behind text that is only producing the shape of one.
+David McRaney, host of the *You Are Not So Smart* podcast ([YANSS 337, 2026-04-13](https://youarenotsosmart.com/2026/04/13/yanss-337-how-to-maintain-your-critical-thinking-and-avoid-cognitive-surrender-when-using-ai-to-solve-problems-make-decisions-and-learn-new-things/)), reframes the Shaw and Nave result as something older than AI. Confident, fluent, agreeable AI prose does not land on a rational evaluator who weighs it and decides. It lands on evolved machinery that reads signals for agency and trust, and fires a response before deliberation starts. McRaney calls the pattern *agentic pareidolia* — the perception of a mind behind text that is only producing the shape of one.
 
 The mechanism, from Niko Tinbergen's ethology, is a supernormal releaser: a signal more exaggerated than anything in nature that triggers an evolved response more strongly than the real stimulus. A herring gull chick pecks at its parent's red-spotted bill to beg for food; present the chick with a detached stick painted with an oversized red stripe and it pecks harder at the stick than at a real gull. McRaney's move is to treat LLM output as the stick. Human prose comes with hesitation and mistakes; AI prose is more fluent and more agreeable than any human writer.
 
@@ -36,7 +36,7 @@ A publication about cognitive surrender whose attribution is blurry discredits i
 
 - **Shaw and Nave (Wharton).** The term *cognitive surrender* as distinct from *cognitive offloading* is theirs. So is the CRT experiment: the manipulated ChatGPT answers, the below-baseline accuracy when the AI was wrong, and the ~10% confidence inflation regardless of correctness. The tri-system extension — AI as a System 3 that substitutes for System 2 rather than assists it — is theirs, detailed in the SSRN working paper cited in §1.
 
-- **David McRaney (*You Are Not So Smart*).** *Agentic pareidolia* is McRaney's coinage. So is applying Tinbergen's supernormal-releaser concept to LLM output — framing AI prose as the exaggerated signal the evolved machinery reads as more trustworthy than any human writer.
+- **David McRaney (*You Are Not So Smart*).** *Agentic pareidolia* is McRaney's coinage. So is applying Tinbergen's supernormal-releaser concept to LLM output — framing AI prose as the exaggerated signal the evolved machinery reads as more trustworthy than any human writer. Episode: [YANSS 337 – How to preserve your critical thinking and avoid cognitive surrender when using AI to solve problems, make decisions, and learn new things](https://youarenotsosmart.com/2026/04/13/yanss-337-how-to-maintain-your-critical-thinking-and-avoid-cognitive-surrender-when-using-ai-to-solve-problems-make-decisions-and-learn-new-things/) (2026-04-13).
 
 - **Kahneman.** The dual-process model (System 1 / System 2) is Kahneman's. The tri-system extension is not.
 
