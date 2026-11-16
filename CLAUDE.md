@@ -4,40 +4,51 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this project is
 
-A small documentation set about **cognitive surrender** — the behavior, identified by Shaw & Nave (Wharton, 2026), where users adopt AI output without verification and treat it as their own reasoning. The repo delivers three things:
+A published essay plus installable Claude prompts about **cognitive surrender** — Shaw & Nave's (Wharton) term for adopting AI output without verification and treating it as your own reasoning. The publication has one job: move a software engineer from meeting the idea to installing a prompt.
 
-1. A summary of the *You Are Not So Smart* podcast episode covering the research.
-2. A pointer to the underlying working paper on SSRN: https://ssrn.com/abstract=6097646
-3. Claude system prompts designed to counteract the mechanisms of cognitive surrender (sycophancy, confidence inflation, zero friction, ownership confusion, bypassed deliberation).
+The entire deliverable is markdown. There is nothing to build or test.
 
-There is no code, no build system, and no test suite. The entire deliverable is markdown.
+[REQUIREMENTS.md](REQUIREMENTS.md) is the contract. Read it before editing published text: it defines the two reader personas, the tone rules, the attribution rules, and the non-goals every edit is measured against.
 
-## Document structure and reading order
+## Two layers
 
-The numeric filename prefixes enforce a deliberate sequence — diagnosis → principles → practice:
+- **Persuasion layer** — [README.md](README.md). The essay: the merge anecdote, the Cognitive Reflection Test study, McRaney's supernormal-releaser reframe, the handoff, the attribution ledger.
+- **Reference layer** — [prompts/](prompts/). [prompts/README.md](prompts/README.md) holds the general prompt and the selection aid; `coding.md`, `decisions.md`, `research.md`, and `writing.md` each hold one specialized prompt.
 
-- [01-podcast-summary-cognitive-surrender.md](01-podcast-summary-cognitive-surrender.md) — the phenomenon, the Cognitive Reflection Test experiment, and the Tri-System Theory framing. This is the source-of-truth summary; downstream docs reuse its vocabulary (supernormal releasers, agentic pareidolia, System 3).
-- [02-prompt-design-principles.md](02-prompt-design-principles.md) — extracts six countermeasures (kill sycophancy, force calibrated uncertainty, add friction, preserve attribution, invert the default on agreement, refuse to decide for the user). Each principle ties back to a specific mechanism named in **01**.
-- [03-ready-to-use-prompts.md](03-ready-to-use-prompts.md) — operationalizes the principles as copy-pasteable prompts: one *general* prompt for Claude's global settings, plus four *project-specific* prompts (writing, coding, research, decisions) that are designed to **stack on top of** the general prompt, not replace it.
+Prompt text lives in the reference layer only. The essay links there once, from its §4 handoff. Each layer must stand alone: a reader who skips the essay still gets everything from `prompts/`.
 
-When editing one file, check whether the change propagates. Adding a new principle to **02** usually implies a corresponding prompt fragment in **03**; changing terminology in **01** usually needs to flow downstream.
+`docs/` is author-facing and unpublished: the drafting plan and distribution notes.
+
+Two mismatches to know about:
+
+- **Section numbers.** REQUIREMENTS.md numbers the publication §1–§7 across both layers. Its §5–§6 are `prompts/README.md`; its §7 is README.md's §5 Attribution.
+- **Missing source files.** REQUIREMENTS.md and the drafting plan cite `01-podcast-summary-cognitive-surrender.md`, `02-prompt-design-principles.md`, and `03-ready-to-use-prompts.md`. Those files are absent from this repo and its history. README.md and `prompts/` are the source of truth now.
+
+## What changes together
+
+- A claim, coinage, or framing edited in README.md §§1–4 needs its line in the §5 attribution ledger updated. The ledger says who originated what — Shaw and Nave, McRaney, Kahneman, or the author — down to individual labels.
+- Each specialized prompt's use-case sentence appears twice: at the top of its own file and in the list in `prompts/README.md`.
+- The four mechanism names (confidence inflation, zero friction, ownership confusion, bypassed deliberation) appear in README.md §4 and are attributed one by one in §5.
 
 ## Editorial voice — non-negotiable
 
-The documents argue against AI sycophancy and ownership confusion. They must sound like they believe it. Preserve:
+The essay argues that AI-shaped rhetoric acts on human cognition. AI-shaped prose inside it falsifies the thesis line by line. The full rules are REQUIREMENTS.md "Tone and voice" and "Attribution"; the ones that decide most edits:
 
-- **No filler praise or hedging.** No "great question," "it's worth noting," "certainly." The general prompt in **03** explicitly bans this; the prose follows the same rule.
-- **Direct attribution.** When a claim comes from Nave, Shaw, McRaney, or Kahneman, name them. Don't launder cited ideas into the ambient voice.
-- **Calibrated language.** Nave is described as "cautiously pessimistic" — not "worried" or "alarmed." Match that level of precision rather than smoothing it out.
-- **Short paragraphs, concrete examples.** The Dwight/Michael *Office* scene and the beaver/gull examples exist because abstract claims about AI don't land. Keep that pattern for new material.
+- **Name the source.** Shaw and Nave, McRaney, Kahneman, Tinbergen — by name, at the claim.
+- **Keep the seam visible.** The author's commentary is first person; the researchers' findings are reportage.
+- **Calibrated numbers.** "About 10%", "roughly 50%" — carry the precision the source carries.
+- **Concrete over abstract.** The herring gull chick pecking the painted stick and the MCP middleware merge carry the argument. New material follows that pattern.
+- **Undated.** Name Claude surfaces without model versions or version-specific UI paths, so the piece stays citable.
 
-If an edit would fit comfortably in a generic AI-risk blog post, it probably violates the voice.
+If an edit would fit comfortably in a generic AI-risk blog post, it violates the voice.
 
 ## Prompt composability
 
-The prompts in **03** are engineered as a layered system:
+The prompts are a layered system:
 
-- The **general prompt** is tuned to be usable for everyday lookups — it corrects for sycophancy and uncertainty without being obstructive.
-- The **project prompts** (writing, coding, research, decisions) intentionally go further on the axis most relevant to that domain — e.g., the research prompt enables Socratic mode, which would be annoying as a global default.
+- The **general prompt** is tuned for everyday lookups — it corrects sycophancy and uncertainty without being obstructive.
+- The **specialized prompts** go further on the axis that matters in their domain, and assume the general prompt is already loaded. The research prompt's Socratic mode is the example: right for a learning Project, annoying as a global default.
 
-When adding or editing a prompt, don't duplicate directives that the general prompt already covers — the project prompts assume the general prompt is already loaded. If you change a directive in the general prompt, check that none of the project prompts contradict it.
+A specialized prompt carries only directives the general prompt lacks. After changing a general-prompt directive, check all four specialized prompts for contradiction.
+
+Every specialized prompt file has the same shape: title, one-sentence use case, **Install** line, one code block, "See also" link back to `prompts/README.md`.
