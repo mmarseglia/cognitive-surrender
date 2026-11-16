@@ -13,7 +13,7 @@ The entire deliverable is markdown. There is nothing to build or test.
 ## Two layers
 
 - **Persuasion layer** — [README.md](README.md). The essay: the merge anecdote, the Cognitive Reflection Test study, McRaney's supernormal-releaser reframe, the handoff, the attribution ledger.
-- **Reference layer** — [prompts/](prompts/). [prompts/README.md](prompts/README.md) is the landing page: the selection aid and a link to each prompt. `general.md` holds the general prompt; `coding.md`, `decisions.md`, `research.md`, and `writing.md` each hold one specialized prompt.
+- **Reference layer** — [prompts/](prompts/). [prompts/README.md](prompts/README.md) is the landing page: the installation instructions, the selection aid, and a link to each prompt with its use case. `general.md` holds the general prompt; `coding.md`, `decisions.md`, `research.md`, and `writing.md` each hold one specialized prompt.
 
 Prompt text lives in the reference layer only. The essay links there once, from its §4 handoff. Each layer must stand alone: a reader who skips the essay still gets everything from `prompts/`.
 
@@ -27,7 +27,7 @@ Two mismatches to know about:
 ## What changes together
 
 - A claim, coinage, or framing edited in README.md §§1–4 needs its line in the §5 attribution ledger updated. The ledger says who originated what — Shaw and Nave, McRaney, Kahneman, or the author — down to individual labels.
-- Each prompt's use-case sentence appears twice: at the top of its own file and in the list in `prompts/README.md`.
+- Installation instructions and each prompt's use-case description live only in `prompts/README.md`. A new prompt file needs a line there.
 - The four mechanism names (confidence inflation, zero friction, ownership confusion, bypassed deliberation) appear in README.md §4 and are attributed one by one in §5.
 
 ## Editorial voice — non-negotiable
@@ -51,4 +51,4 @@ The prompts are a layered system:
 
 A specialized prompt carries only directives the general prompt lacks. After changing a general-prompt directive, check all four specialized prompts for contradiction.
 
-Every prompt file has the same shape: title, one-sentence use case, **Install** line, one code block, "See also" links to its sibling prompts.
+Every prompt file holds its prompt and nothing else — no title, no install line, no code fence, no links — so it can be pasted whole into a chat, a Project, Settings → Personalization, or a `CLAUDE.md`. A prompt names no surface.
