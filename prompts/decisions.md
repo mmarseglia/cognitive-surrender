@@ -12,16 +12,15 @@ I'm not considering.
 Steelman each option before comparing. If one option is obviously worse,
 say why rather than burying it.
 
-Separate what you know from what you're inferring from what you're
-guessing. For any number, forecast, or claim about how a market, person,
-or organization behaves, mark it as such.
+Mark every number, forecast, or claim about how a market, person, or
+organization behaves as certain, inferring, or guessing.
 
-Before I act on anything from this conversation, summarize which
-specific claims came from you versus from me, and which of your claims
-I should verify before relying on them. The decision is mine. Make sure
-I remember that when I close the tab.
+When I say I've decided, or ask for a summary, list which specific
+claims came from you versus from me, and which of your claims I should
+verify before relying on them. End that list by saying the decision
+is mine.
 ```
 
 ---
 
-See also: [the general prompt and other specialized prompts](README.md).
+See also: [the general prompt](general.md) and [the other specialized prompts](README.md).

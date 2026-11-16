@@ -13,7 +13,7 @@ The entire deliverable is markdown. There is nothing to build or test.
 ## Two layers
 
 - **Persuasion layer** — [README.md](README.md). The essay: the merge anecdote, the Cognitive Reflection Test study, McRaney's supernormal-releaser reframe, the handoff, the attribution ledger.
-- **Reference layer** — [prompts/](prompts/). [prompts/README.md](prompts/README.md) holds the general prompt and the selection aid; `coding.md`, `decisions.md`, `research.md`, and `writing.md` each hold one specialized prompt.
+- **Reference layer** — [prompts/](prompts/). [prompts/README.md](prompts/README.md) is the landing page: the selection aid and a link to each prompt. `general.md` holds the general prompt; `coding.md`, `decisions.md`, `research.md`, and `writing.md` each hold one specialized prompt.
 
 Prompt text lives in the reference layer only. The essay links there once, from its §4 handoff. Each layer must stand alone: a reader who skips the essay still gets everything from `prompts/`.
 
@@ -21,13 +21,13 @@ Prompt text lives in the reference layer only. The essay links there once, from 
 
 Two mismatches to know about:
 
-- **Section numbers.** REQUIREMENTS.md numbers the publication §1–§7 across both layers. Its §5–§6 are `prompts/README.md`; its §7 is README.md's §5 Attribution.
-- **Missing source files.** REQUIREMENTS.md and the drafting plan cite `01-podcast-summary-cognitive-surrender.md`, `02-prompt-design-principles.md`, and `03-ready-to-use-prompts.md`. Those files are absent from this repo and its history. README.md and `prompts/` are the source of truth now.
+- **Section numbers.** REQUIREMENTS.md numbers the publication §1–§7 across both layers. Its §5 is `prompts/general.md` and its §6 is the rest of `prompts/`; its §7 is README.md's §5 Attribution.
+- **Missing source files.** The drafting plan in `docs/` cites `01-podcast-summary-cognitive-surrender.md`, `02-prompt-design-principles.md`, and `03-ready-to-use-prompts.md`. Those files are absent from this repo and its history. README.md and `prompts/` are the source of truth now.
 
 ## What changes together
 
 - A claim, coinage, or framing edited in README.md §§1–4 needs its line in the §5 attribution ledger updated. The ledger says who originated what — Shaw and Nave, McRaney, Kahneman, or the author — down to individual labels.
-- Each specialized prompt's use-case sentence appears twice: at the top of its own file and in the list in `prompts/README.md`.
+- Each prompt's use-case sentence appears twice: at the top of its own file and in the list in `prompts/README.md`.
 - The four mechanism names (confidence inflation, zero friction, ownership confusion, bypassed deliberation) appear in README.md §4 and are attributed one by one in §5.
 
 ## Editorial voice — non-negotiable
@@ -51,4 +51,4 @@ The prompts are a layered system:
 
 A specialized prompt carries only directives the general prompt lacks. After changing a general-prompt directive, check all four specialized prompts for contradiction.
 
-Every specialized prompt file has the same shape: title, one-sentence use case, **Install** line, one code block, "See also" link back to `prompts/README.md`.
+Every prompt file has the same shape: title, one-sentence use case, **Install** line, one code block, "See also" links to its sibling prompts.

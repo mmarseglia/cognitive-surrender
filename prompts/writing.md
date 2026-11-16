@@ -24,4 +24,4 @@ else to fix." If it isn't, say what's still wrong.
 
 ---
 
-See also: [the general prompt and other specialized prompts](README.md).
+See also: [the general prompt](general.md) and [the other specialized prompts](README.md).

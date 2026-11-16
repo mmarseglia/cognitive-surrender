@@ -1,20 +1,19 @@
 # REQUIREMENTS — Cognitive Surrender Publication
 
-*Specification for a publication built from the source material in this
-directory. Date: 2026-04-22. Status: draft.*
+*Specification for the publication in this repository. Date: 2026-04-22.
+Status: draft.*
 
 This document specifies what the publication must contain, who it must
 serve, and what behavior it must produce. It is the contract the draft
-will be measured against. Source material for the publication lives in
-`01-podcast-summary-cognitive-surrender.md`,
-`02-prompt-design-principles.md`, and `03-ready-to-use-prompts.md`.
+will be measured against. The publication lives in `README.md` (the
+persuasion layer) and `prompts/` (the reference layer). The source
+material it was drafted from is not kept in this repository.
 
 ---
 
 ## Purpose
 
-Specify what the publication built from this directory's source material
-must contain and do. The publication's single job is to move a reader from
+Specify what the publication must contain and do. The publication's single job is to move a reader from
 encountering the idea of *cognitive surrender* to installing one of the
 prompts in the reference layer, and — for a reader who is already
 convinced — to forward the publication to peers.
@@ -88,9 +87,12 @@ the shape before any content requirement:
 4. **Time-to-value constraints.**
    - Reader A reaches the transition in under about four minutes of
      reading (roughly 800–1000 words for §§1–4 combined).
-   - Reader B reaches the first copy-pasteable prompt within one
-     scroll-screen of arriving at the reference layer (measured on a
-     1440×900 desktop viewport).
+   - Reader B reaches the first copy-pasteable prompt within one click
+     of arriving at the reference layer. The landing page
+     (`prompts/README.md`) shows the selection aid and a link to every
+     prompt without scrolling, and each prompt file shows its code
+     block without scrolling (both measured on a 1440×900 desktop
+     viewport).
 
 ---
 
@@ -140,20 +142,23 @@ layer]."* The handoff is what makes the independence rule real.
 
 ### Reference layer
 
-**§5. The general prompt.** File 03's general prompt, presented as a
-single copy-pasteable code block. Must include Claude installation
-instructions (Settings → Personalization). Installation paths for
-ChatGPT, Gemini, or other assistants are out of scope.
+**§5. The general prompt.** The general prompt, in its own file
+(`prompts/general.md`), presented as a single copy-pasteable code
+block. Must include Claude installation instructions (Settings →
+Personalization). Installation paths for ChatGPT, Gemini, or other
+assistants are out of scope.
 
 **§6. The specialized prompts.** The four project prompts (writing,
-coding, research, decisions) from file 03. Each must name its intended
-use case and be presented for installation as a Claude Project system
-prompt. A selection aid must appear: *"If you write code daily, install
+coding, research, decisions), one file each in `prompts/`. Each must
+name its intended use case and be presented for installation as a
+Claude Project system prompt. A selection aid must appear on the
+landing page (`prompts/README.md`): *"If you write code daily, install
 the coding prompt first. If your AI use is mostly outside code, start
 with the general prompt."* This neutralizes the selection-gap friction
 that would otherwise re-emerge for Reader A after they're convinced.
 
-**§7. Closing attribution.** A short final section explicitly naming
+**§7. Closing attribution.** Lives at the end of `README.md`, as its
+§5. A short final section explicitly naming
 which claims originated with Shaw & Nave (the CRT study, the
 tri-system extension, the confidence-inflation finding), which with
 McRaney (the supernormal-releaser reframe, the *agentic pareidolia*
