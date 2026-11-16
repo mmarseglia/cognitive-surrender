@@ -46,7 +46,8 @@ and share.
 **Scope.** Both readers are assumed to be Claude users, or willing to
 become Claude users. Readers who exclusively use other assistants
 (ChatGPT, Gemini, local models) are out of scope; the prompts rely on
-Claude-specific surfaces (Settings → Personalization, Projects).
+Claude-specific surfaces (Settings → Personalization, Projects,
+`CLAUDE.md`).
 
 ---
 
@@ -89,9 +90,9 @@ the shape before any content requirement:
      reading (roughly 800–1000 words for §§1–4 combined).
    - Reader B reaches the first copy-pasteable prompt within one click
      of arriving at the reference layer. The landing page
-     (`prompts/README.md`) shows the selection aid and a link to every
-     prompt without scrolling, and each prompt file shows its code
-     block without scrolling (both measured on a 1440×900 desktop
+     (`prompts/README.md`) shows the selection aid, the installation
+     instructions, and a link to every prompt without
+     scrolling, and each prompt file shows its prompt without scrolling (both measured on a 1440×900 desktop
      viewport).
 
 ---
@@ -142,17 +143,26 @@ layer]."* The handoff is what makes the independence rule real.
 
 ### Reference layer
 
-**§5. The general prompt.** The general prompt, in its own file
-(`prompts/general.md`), presented as a single copy-pasteable code
-block. Must include Claude installation instructions (Settings →
-Personalization). Installation paths for ChatGPT, Gemini, or other
-assistants are out of scope.
+**Landing page.** `prompts/README.md` opens with the installation
+instructions, covering every route named under *Prompt files* below.
+After them it lists each prompt with a link and a short description
+of its use.
+
+**Prompt files.** Every prompt file in `prompts/` contains its prompt
+and nothing else. Installation instructions appear in none of them;
+they live only on the landing page. Each file must work when pasted
+whole or included directly in any of four places: a chat, a Claude
+Project, Claude's general system prompt (Settings → Personalization),
+or a `CLAUDE.md`.
+
+**§5. The general prompt.** The general prompt lives in its own file
+(`prompts/general.md`). Installation paths for ChatGPT, Gemini, or
+other assistants are out of scope.
 
 **§6. The specialized prompts.** The four project prompts (writing,
-coding, research, decisions), one file each in `prompts/`. Each must
-name its intended use case and be presented for installation as a
-Claude Project system prompt. A selection aid must appear on the
-landing page (`prompts/README.md`): *"If you write code daily, install
+coding, research, decisions), one file each in `prompts/`. The landing
+page names each one's intended use case. A selection aid must appear
+on the landing page (`prompts/README.md`): *"If you write code daily, install
 the coding prompt first. If your AI use is mostly outside code, start
 with the general prompt."* This neutralizes the selection-gap friction
 that would otherwise re-emerge for Reader A after they're convinced.
